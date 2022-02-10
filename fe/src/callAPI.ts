@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios , {AxiosError} from 'axios'
 
 import storage from './helpers/storage'
 
@@ -15,8 +15,9 @@ const create = () => {
     })
 }
 
-const callAPI = {
-    get: async (route: string) => {
+
+const callAPI  = {
+    get: async function (route: string) : Promise<any> {
         try {
             const client = create()
             axiosRetry(client, {
@@ -25,11 +26,11 @@ const callAPI = {
             })
             const { data } = await client.get(route)
             return data
-        } catch (error: any) {
-            console.log(error);
+        } catch (error : any) {
+            return error
         }
     },
-    post: async (route: string, body: {}) => {
+    post: async (route: string, body: {}) : Promise< any> => {
         try {
             const client = create()
             axiosRetry(client, {
@@ -42,7 +43,7 @@ const callAPI = {
             console.log(error);
         }
     },
-    put : async (route : string , body : {}) => {
+    put : async (route : string , body : {}) : Promise< any> => {
         try {
             const client = create()
             axiosRetry(client, {
@@ -55,7 +56,7 @@ const callAPI = {
             console.log(error);
         }
     },
-    delete : async (route : string ) => {
+    delete : async (route : string ) : Promise< any> => {
         try {
             const client = create()
             axiosRetry(client, {

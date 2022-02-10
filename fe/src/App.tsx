@@ -5,7 +5,8 @@ function App() {
   useEffect(() => {
     callAPI.get('/')
     .then(res => {
-
+      console.log(res?.);
+      
     })
   },[])
   return (
