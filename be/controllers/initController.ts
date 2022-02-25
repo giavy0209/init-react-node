@@ -1,5 +1,5 @@
 import {Request,Response} from "express";
-
+import {InitModel, InitModel2} from 'models'
 class InitControllers {
     static async get(req : Request,res : Response) {
         console.log(req.originalUrl);

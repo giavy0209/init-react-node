@@ -1,0 +1,1 @@
+export {default as initController} from './initController'

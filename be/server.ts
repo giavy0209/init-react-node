@@ -1,13 +1,12 @@
-import fs from 'fs'
 import http from 'http'
-import express , {json , urlencoded} from 'express'
+import express , {json , urlencoded, } from 'express'
 import { Server } from "socket.io";
 
 import cors from 'cors'
 
 import routers from './routers';
-import './config'
-import './helpers/connectDB'
+import '@config'
+import '@helpers/connectDB'
 
 const app = express()
 const server = http.createServer(app)

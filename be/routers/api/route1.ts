@@ -1,7 +1,7 @@
-import express, { Router } from "express";
-import controller from '../../controllers/initController'
+import { Router } from "express";
+import {initController as controller} from 'controllers'
 
-const router = express.Router()
+const router = Router()
 
 router.route('/route1')
     .get(controller.get)

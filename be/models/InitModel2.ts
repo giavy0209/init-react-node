@@ -1,6 +1,7 @@
 import {model, Schema, Types} from 'mongoose'
+import { IModel2 } from './interface'
 
-const InitSchema = new Schema({
+const InitSchema = new Schema<IModel2>({
     field1 : {type : String, required: true , index : true , unique : true},
     field2 : {type : Number, required : true , min : 0 , max : 10},
     field3 : {type : Boolean , default : false },
@@ -14,6 +15,6 @@ const InitSchema = new Schema({
     }
 })
 
-const Inits = model('inits2' , InitSchema)
+const Inits = model<IModel2>('inits2' , InitSchema)
 
 export default Inits
