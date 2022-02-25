@@ -14,6 +14,6 @@ const InitSchema = new Schema({
     }
 })
 
-const Inits = model('inits' , InitSchema)
+const Inits = model('inits2' , InitSchema)
 
 export default Inits

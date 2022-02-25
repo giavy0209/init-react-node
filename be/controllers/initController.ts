@@ -1,15 +1,43 @@
 import {Request,Response} from "express";
-import {model} from 'mongoose'
-
-const InitModel = model('inits')
 
 class InitControllers {
-    static async getSomething(req : Request,res : Response) {
+    static async get(req : Request,res : Response) {
+        console.log(req.originalUrl);
         
         res.send('send data here')
     }
 
-    static async postSomething(req : Request,res : Response) {
+    static async post(req : Request,res : Response) {
+        
+        res.send('send data here')
+    }
+
+    static async put(req : Request,res : Response) {
+        
+        res.send('send data here')
+    }
+
+    static async delete(req : Request,res : Response) {
+        
+        res.send('send data here')
+    }
+
+    static async getDetail(req : Request,res : Response) {
+        
+        res.send('send data here')
+    }
+
+    static async postDetail(req : Request,res : Response) {
+        
+        res.send('send data here')
+    }
+
+    static async putDetail(req : Request,res : Response) {
+        
+        res.send('send data here')
+    }
+
+    static async deleteDetail(req : Request,res : Response) {
         
         res.send('send data here')
     }
