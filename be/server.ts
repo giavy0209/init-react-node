@@ -16,11 +16,6 @@ app.use(json())
 app.use(urlencoded({ limit: '50mb', extended: true}))
 app.use('/' , routers)
 
-// fs.readdirSync('./models').forEach(model => {
-//     require(`./models/${model}`)
-// })
-
-
 const io = new Server(server, {
     cors: {
         origin: '*',
